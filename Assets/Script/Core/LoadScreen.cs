@@ -11,7 +11,7 @@ public class LoadScreen : MonoBehaviour {
 	public bool _ready;
 	public bool _playing;
 	public int  _countLoaded;
-	private GateState _gateState;
+	public GateState _gateState;
 	
 	public Texture2D		gateLeft;//vian
 	public Texture2D		gateRight;//vian

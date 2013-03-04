@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class StructureBuilder : MonoBehaviour {
-	public float buildingTime = 4f;
+	public float buildingTime = 0f;
 	public Vector3 position;
 	public IStructureBehavior attackBehavior;
 	public TowerFactory factory;
@@ -20,7 +20,7 @@ public class StructureBuilder : MonoBehaviour {
 	
 	void Update(){
 		if(!Game.getInstance().isPaused()){
-			if(temporizer <= 0){
+			if(temporizer >= 0){
 				structureManager.addStructure(position, attackBehavior, factory);
 				Destroy(gameObject);
 			}

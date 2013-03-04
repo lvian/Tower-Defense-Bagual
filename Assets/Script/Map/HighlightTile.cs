@@ -3,8 +3,7 @@ using System.Collections;
 
 public class HighlightTile : MonoBehaviour {
 	
-	public Object       prefab;
-	
+	public  Object       prefab;
 	private GameObject  _tileHighlighter;
 	private CameraTools _cameraTools;
 	private Game        _gameState;
