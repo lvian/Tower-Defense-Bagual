@@ -1,0 +1,82 @@
+fileFormatVersion: 2
+guid: ce1fe0ecc48557b4a8d44f594e16af1f
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: ponteiro
+    100002: //RootNode
+    100004: cabe_a_relogio
+    100006: base_relogio
+    100008: Texture Group
+    100010: Cylinder
+    100012: TextureLocators
+    100014: 'Texture Group '
+    400000: ponteiro
+    400002: //RootNode
+    400004: cabe_a_relogio
+    400006: base_relogio
+    400008: Texture Group
+    400010: Cylinder
+    400012: TextureLocators
+    400014: 'Texture Group '
+    2300000: ponteiro
+    2300002: cabe_a_relogio
+    2300004: base_relogio
+    3300000: ponteiro
+    3300002: cabe_a_relogio
+    3300004: base_relogio
+    4300000: cabe_a_relogio
+    4300002: ponteiro
+    4300004: base_relogio
+    7400000: Default Take
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 3
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

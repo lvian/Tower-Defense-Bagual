@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 82324ad5ff9081a49b31b39055c1f350
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Texture Group
+    100004: 'Gear03 '
+    100006: Gear03
+    100008: Gear02
+    100010: 'Mesh '
+    100012: TextureLocators
+    100018: tower_spots
+    100020: track
+    100022: background
+    100024: Gear01
+    100028: Wall
+    100030: Trims
+    400000: //RootNode
+    400002: Texture Group
+    400004: 'Gear03 '
+    400006: Gear03
+    400008: Gear02
+    400010: 'Mesh '
+    400012: TextureLocators
+    400018: tower_spots
+    400020: track
+    400022: background
+    400024: Gear01
+    400028: Wall
+    400030: Trims
+    2300000: 'Gear03 '
+    2300002: Gear03
+    2300004: Gear02
+    2300006: 'Mesh '
+    2300008: tower_spots
+    2300010: track
+    2300012: background
+    2300014: Gear01
+    2300016: Wall
+    2300018: Trims
+    3300000: 'Gear03 '
+    3300002: Gear03
+    3300004: Gear02
+    3300006: 'Mesh '
+    3300008: tower_spots
+    3300010: track
+    3300012: background
+    3300014: Gear01
+    3300016: Wall
+    3300018: Trims
+    4300000: Trims
+    4300002: Wall
+    4300004: Gear01
+    4300006: background
+    4300008: track
+    4300010: tower_spots
+    4300012: 'Mesh '
+    4300014: Gear02
+    4300016: Gear03
+    4300018: 'Gear03 '
+    7400000: Take 001
+    7400012: ModoAnim
+    11100000: //RootNode
+    11100002: Gear03
+    11100004: TextureLocators
+    11100006: tower_spots
+    11100008: Gear02
+    11100012: Wall
+    11100016: track
+    11100018: 'Gear03 '
+    11100022: 'Mesh '
+    11100024: Texture Group
+    11100026: background
+    11100028: Gear01
+    11100030: Trims
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 4
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 3
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

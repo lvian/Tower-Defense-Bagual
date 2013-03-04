@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 1bba2c79b15c5af4882590a7e873464f
+SubstanceImporter:
+  serializedVersion: 5
+  materialInstances:
+  - serializedVersion: 6
+    name: light_flare_01
+    prototypeName: light_flare
+    shaderName: Particles/Additive
+    inputs: []
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+        data:
+          first:
+            name: _MainTex
+          second:
+            texture: {fileID: -1770853932, guid: 1bba2c79b15c5af4882590a7e873464f,
+              type: 3}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+      floats:
+        data:
+          first:
+            name: _Shininess
+          second: .078125
+        data:
+          first:
+            name: _InvFade
+          second: 3
+      colors:
+        data:
+          first:
+            name: _Color
+          second: {r: 1, g: 1, b: 1, a: 1}
+        data:
+          first:
+            name: _SpecColor
+          second: {r: .5, g: .5, b: .5, a: 1}
+        data:
+          first:
+            name: _TintColor
+          second: {r: 1, g: .358208954, b: .358208954, a: .501960814}
+    textureParameters:
+    - name: light_flare_Output
+      alphaSource: 5
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: light_flare_01_Output
+      alphaSource: 5
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  - serializedVersion: 6
+    name: light_flare_02
+    prototypeName: light_flare
+    shaderName: Particles/Additive
+    inputs: []
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+        data:
+          first:
+            name: _MainTex
+          second:
+            texture: {fileID: -607538999, guid: 1bba2c79b15c5af4882590a7e873464f,
+              type: 3}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+      floats:
+        data:
+          first:
+            name: _Shininess
+          second: .078125
+        data:
+          first:
+            name: _InvFade
+          second: 1
+      colors:
+        data:
+          first:
+            name: _Color
+          second: {r: 1, g: 1, b: 1, a: 1}
+        data:
+          first:
+            name: _SpecColor
+          second: {r: .5, g: .5, b: .5, a: 1}
+        data:
+          first:
+            name: _TintColor
+          second: {r: .5, g: .5, b: .5, a: .5}
+    textureParameters:
+    - name: light_flare_Output
+      alphaSource: 5
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: light_flare_02_Output
+      alphaSource: 5
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  deletedPrototypes: []
+  userData: 

@@ -1,0 +1,69 @@
+fileFormatVersion: 2
+guid: 4e6833bf6a0c5ed409bd5971a81bce2a
+SubstanceImporter:
+  serializedVersion: 5
+  materialInstances:
+  - serializedVersion: 6
+    name: smoke_01
+    prototypeName: smoke_01
+    shaderName: Particles/Alpha Blended Premultiply
+    inputs: []
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+        data:
+          first:
+            name: _MainTex
+          second:
+            texture: {fileID: -1807674071, guid: 4e6833bf6a0c5ed409bd5971a81bce2a,
+              type: 3}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+      floats:
+        data:
+          first:
+            name: _Shininess
+          second: .078125
+        data:
+          first:
+            name: _InvFade
+          second: 1.61656725
+      colors:
+        data:
+          first:
+            name: _Color
+          second: {r: 1, g: 1, b: 1, a: 1}
+        data:
+          first:
+            name: _SpecColor
+          second: {r: .5, g: .5, b: .5, a: 1}
+        data:
+          first:
+            name: _TintColor
+          second: {r: .5, g: .5, b: .5, a: .5}
+    textureParameters:
+    - name: smoke_01_Output
+      alphaSource: 5
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: smoke_01_Output_1
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  deletedPrototypes: []
+  userData: 

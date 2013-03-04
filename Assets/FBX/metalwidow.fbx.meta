@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: 309e119e7dc518d4c92b9ce074642686
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: FullBodyIK
+    100002: Goal
+    100004: 'Goal '
+    100006: Goal  1
+    100008: Goal  2
+    100010: Goal  3
+    100012: Goal  4
+    100014: Goal  5
+    100016: Goal  6
+    100018: Goal  7
+    100020: Goal  8
+    100022: Goal  9
+    100024: metalWidow
+    100026: //RootNode
+    100028: 'metalWidow '
+    100030: Skeleton_Joint
+    100032: 'Skeleton_Joint '
+    100034: Skeleton_Joint  1
+    100036: Skeleton_Joint  10
+    100038: Skeleton_Joint  11
+    100040: Skeleton_Joint  12
+    100042: Skeleton_Joint  13
+    100044: Skeleton_Joint  14
+    100046: Skeleton_Joint  15
+    100048: Skeleton_Joint  16
+    100050: Skeleton_Joint  17
+    100052: Skeleton_Joint  18
+    100054: Skeleton_Joint  19
+    100056: Skeleton_Joint  2
+    100058: Skeleton_Joint  20
+    100060: Skeleton_Joint  21
+    100062: Skeleton_Joint  22
+    100064: Skeleton_Joint  23
+    100066: Skeleton_Joint  24
+    100068: Skeleton_Joint  25
+    100070: Skeleton_Joint  26
+    100072: Skeleton_Joint  27
+    100074: Skeleton_Joint  28
+    100076: Skeleton_Joint  29
+    100078: Skeleton_Joint  3
+    100080: Skeleton_Joint  30
+    100082: Skeleton_Joint  31
+    100084: Skeleton_Joint  32
+    100086: Skeleton_Joint  33
+    100088: Skeleton_Joint  34
+    100090: Skeleton_Joint  35
+    100092: Skeleton_Joint  36
+    100094: Skeleton_Joint  37
+    100096: Skeleton_Joint  4
+    100098: Skeleton_Joint  5
+    100100: Skeleton_Joint  6
+    100102: Skeleton_Joint  7
+    100104: Skeleton_Joint  8
+    100106: Skeleton_Joint  9
+    100108: Texture Group
+    400000: FullBodyIK
+    400002: Goal
+    400004: 'Goal '
+    400006: Goal  1
+    400008: Goal  2
+    400010: Goal  3
+    400012: Goal  4
+    400014: Goal  5
+    400016: Goal  6
+    400018: Goal  7
+    400020: Goal  8
+    400022: Goal  9
+    400024: metalWidow
+    400026: //RootNode
+    400028: 'metalWidow '
+    400030: Skeleton_Joint
+    400032: 'Skeleton_Joint '
+    400034: Skeleton_Joint  1
+    400036: Skeleton_Joint  10
+    400038: Skeleton_Joint  11
+    400040: Skeleton_Joint  12
+    400042: Skeleton_Joint  13
+    400044: Skeleton_Joint  14
+    400046: Skeleton_Joint  15
+    400048: Skeleton_Joint  16
+    400050: Skeleton_Joint  17
+    400052: Skeleton_Joint  18
+    400054: Skeleton_Joint  19
+    400056: Skeleton_Joint  2
+    400058: Skeleton_Joint  20
+    400060: Skeleton_Joint  21
+    400062: Skeleton_Joint  22
+    400064: Skeleton_Joint  23
+    400066: Skeleton_Joint  24
+    400068: Skeleton_Joint  25
+    400070: Skeleton_Joint  26
+    400072: Skeleton_Joint  27
+    400074: Skeleton_Joint  28
+    400076: Skeleton_Joint  29
+    400078: Skeleton_Joint  3
+    400080: Skeleton_Joint  30
+    400082: Skeleton_Joint  31
+    400084: Skeleton_Joint  32
+    400086: Skeleton_Joint  33
+    400088: Skeleton_Joint  34
+    400090: Skeleton_Joint  35
+    400092: Skeleton_Joint  36
+    400094: Skeleton_Joint  37
+    400096: Skeleton_Joint  4
+    400098: Skeleton_Joint  5
+    400100: Skeleton_Joint  6
+    400102: Skeleton_Joint  7
+    400104: Skeleton_Joint  8
+    400106: Skeleton_Joint  9
+    400108: Texture Group
+    4300000: metalWidow
+    7400000: walk
+    7400002: dying
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: metalWidow
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: walk
+      takeName: modo_Anim
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      keepAdditionalBonesAnimation: 1
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      skeletonMaskElements: []
+    - name: dying
+      takeName: modo_Anim
+      firstFrame: 125
+      lastFrame: 185
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      keepAdditionalBonesAnimation: 1
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      skeletonMaskElements: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

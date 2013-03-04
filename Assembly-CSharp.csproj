@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{7C38699A-A080-F215-E834-F1702E14B938}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\GameAnalytics\Plugins\Components\GA_Tracker.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\ComboBox.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleBall.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleController.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleFloor.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleHighScore.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleManager.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleMoveWithPlayer.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleTarget.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleWall.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Archive.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Business.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_ContinuationManager.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_DataPoint.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Debug.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Design.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_GUIHelper.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_GameObjectManager.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_GenericInfo.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Gui.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_HeatMapDataFilter.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_HeatMapDataFilterBase.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_HeatMapRenderer.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_HeatmapData.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Histogram.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Quality.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Queue.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Request.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_ServerFieldTypes.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Settings.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_SpecialEvents.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_Submit.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_SystemTracker.cs" />
+     <Compile Include="Assets\GameAnalytics\Plugins\Framework\Scripts\GA_User.cs" />
+     <Compile Include="Assets\Script\AI\FoodFactoryWave.cs" />
+     <Compile Include="Assets\Script\AI\LevelManager.cs" />
+     <Compile Include="Assets\Script\AI\NotificatorMessage.cs" />
+     <Compile Include="Assets\Script\AI\SlaugtherHouseWave.cs" />
+     <Compile Include="Assets\Script\AI\StructureManager.cs" />
+     <Compile Include="Assets\Script\AI\Wave.cs" />
+     <Compile Include="Assets\Script\AI\WaveUnit.cs" />
+     <Compile Include="Assets\Script\AI\Waves.cs" />
+     <Compile Include="Assets\Script\Camera\CameraMovement.cs" />
+     <Compile Include="Assets\Script\Camera\CameraMovement2.cs" />
+     <Compile Include="Assets\Script\Camera\CameraMovement3.cs" />
+     <Compile Include="Assets\Script\Camera\CameraTools.cs" />
+     <Compile Include="Assets\Script\Core\Callback.cs" />
+     <Compile Include="Assets\Script\Core\EventManager.cs" />
+     <Compile Include="Assets\Script\Core\Game.cs" />
+     <Compile Include="Assets\Script\Core\LoadScreen.cs" />
+     <Compile Include="Assets\Script\Core\Messenger.cs" />
+     <Compile Include="Assets\Script\GUI\GUIManager.cs" />
+     <Compile Include="Assets\Script\GUI\GUINotificator.cs" />
+     <Compile Include="Assets\Script\Map\HighlightTile.cs" />
+     <Compile Include="Assets\Script\Map\Level.cs" />
+     <Compile Include="Assets\Script\Map\Map.cs" />
+     <Compile Include="Assets\Script\Map\MapDraw.cs" />
+     <Compile Include="Assets\Script\Map\Tile.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\BossBot\BossBot.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\BossBot\SteamRebelBoss.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Bot.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Bot\CommonBot.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Bot\SteamRebel.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Bot\SteamRebelBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Bot\SteamRebelDefense.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\HealthBar.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Iron Beetle\IronBeetle.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Iron Beetle\IronBeetleBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Iron Beetle\IronBeetleDefense.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\MetalWidow\CrawlBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\MetalWidow\MetalWidow.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\MetalWidow\MetalWidowBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\MetalWidow\MetalWidowDefense.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Spiderling\Nest.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Spiderling\NestBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Spiderling\NestDefense.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Spiderling\NestStillness.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Spiderling\Spiderling.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Spiderling\SpiderlingBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Spiderling\SpiderlingDefense.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\Spiderling\SpiderlingWalking.cs" />
+     <Compile Include="Assets\Script\Objects\Bots\WalkBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Entities\AttackingEntity.cs" />
+     <Compile Include="Assets\Script\Objects\Entities\Entity.cs" />
+     <Compile Include="Assets\Script\Objects\Entities\IEntityStats.cs" />
+     <Compile Include="Assets\Script\Objects\Entities\InvadingEntity.cs" />
+     <Compile Include="Assets\Script\Objects\Entities\ProjectileEntity.cs" />
+     <Compile Include="Assets\Script\Objects\FactoryPattern\Tower.cs" />
+     <Compile Include="Assets\Script\Objects\FactoryPattern\TowerFactory.cs" />
+     <Compile Include="Assets\Script\Objects\Interfaces\IBotBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Interfaces\IBotStats.cs" />
+     <Compile Include="Assets\Script\Objects\Interfaces\IDefendBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Interfaces\IMoveBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Interfaces\IStructureBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Interfaces\IStructureStats.cs" />
+     <Compile Include="Assets\Script\Objects\MapObjects\Clock\clock.cs" />
+     <Compile Include="Assets\Script\Objects\MapObjects\Gear\gear.cs" />
+     <Compile Include="Assets\Script\Objects\MapObjects\Heart\heart.cs" />
+     <Compile Include="Assets\Script\Objects\Misc\AttackingUnit.cs" />
+     <Compile Include="Assets\Script\Objects\Misc\InvadingUnit.cs" />
+     <Compile Include="Assets\Script\Objects\Player\PlayerManager.cs" />
+     <Compile Include="Assets\Script\Objects\Player\PlayerManagerModified.cs" />
+     <Compile Include="Assets\Script\Objects\Projectile\JumpShot.cs" />
+     <Compile Include="Assets\Script\Objects\Projectile\Shot.cs" />
+     <Compile Include="Assets\Script\Objects\Skills\Skill.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\BotAttribute.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\BotStats.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\BotVitals.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\Damage.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\Effect.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\Effects.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\Modifier.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\Stats.cs" />
+     <Compile Include="Assets\Script\Objects\Stats\StructureAttribute.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\Bunker\BunkerBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\Bunker\BunkerLevel1.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\Bunker\BunkerLevel2.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\LightningTower\LightningTower.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\LightningTower\LightningTowerAnimation.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\LightningTower\LightningTowerBase.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\LightningTower\LightningTowerBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\LightningTower\LightningTowerFactory.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\NailSpitter\NailSpitterBase.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\NailSpitter\NailSpitterBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\NailSpitter\NailSpitterFactory.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\NailSpitter\NailSpitterTower.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\OilSquall\OilSquallBase.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\OilSquall\OilSquallBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\OilSquall\OilSquallFactory.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\OilSquall\OilSquallTower.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\Structure.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\StructureBuilder.cs" />
+     <Compile Include="Assets\Script\Pathfinding\Lane.cs" />
+     <Compile Include="Assets\Script\Pathfinding\WayPoint.cs" />
+     <Compile Include="Assets\Script\Tests\FloatingText.cs" />
+     <Compile Include="Assets\Script\Tests\Gain.cs" />
+     <Compile Include="Assets\Script\Tests\Noise.cs" />
+     <Compile Include="Assets\Script\Tests\OneTimePlayedParticle.cs" />
+     <Compile Include="Assets\Script\Tests\ScrollingUVs.cs" />
+     <Compile Include="Assets\Script\Tests\Sinus.cs" />
+     <None Include="Assets\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapSolidOverlay.shader" />
+     <None Include="Assets\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapTransparentOverlay.shader" />
+     <None Include="Assets\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapSolid.shader" />
+     <None Include="Assets\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapTransparent.shader" />
+     <None Include="Assets\GameAnalytics\Plugins\WebPlayer\Readme_WebPlayer.txt" />
+     <None Include="Assets\GameAnalytics\Plugins\WebPlayer\crossdomain.xml" />
+ <Reference Include="LitJson">
+ <HintPath>Assets\GameAnalytics\Plugins\Framework\Using\LitJson.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
