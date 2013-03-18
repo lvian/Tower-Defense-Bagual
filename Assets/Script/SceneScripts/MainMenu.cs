@@ -14,9 +14,14 @@ public class MainMenu : MonoBehaviour {
 	public Texture2D	logo;
 	private State		_state;
 	private bool		_ready;
+	private Game		_game;
+	private LoadScreen	_ls;
 	
 	void Start (){
 		_state = State.Setup;
+		_game = Game.getInstance();
+		_game.GState = Game.GameState.Loading;
+		_ls = GameObject.Find("LoadingScreen").GetComponent<LoadScreen>();
 	}
 	
 	void Update (){
@@ -46,13 +51,15 @@ public class MainMenu : MonoBehaviour {
 			credits();
 			
 		if(_state == State.Ready){
-			//AudioSource.PlayClipAtPoint(newGameSound, transform.position , 1)
-			Application.LoadLevel("FoodFactory");
+			_game.GState = Game.GameState.Loading;
+			_ls.nextLevel = Application.loadedLevel + 1;
+			_ls.gateClosed();
 		}
 	}
 	void setup(){
 		_ready = false;
 		_state = State.Main;
+		_ls._gateState = GateState.MainMenu;
 	}
 		
 	void main(){

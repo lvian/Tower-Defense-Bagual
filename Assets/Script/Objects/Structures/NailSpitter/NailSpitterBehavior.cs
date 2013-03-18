@@ -20,12 +20,14 @@ public class NailSpitterBehavior: IStructureBehavior {
 			if(structure.lastShot <= 0){
 				//gun.particleSystem.Play();
 				GameObject newShot = Object.Instantiate(Resources.Load("Prefabs/Nail")) as GameObject;
+				AudioClip shotSound = Resources.Load("AudioClip/NailSpitter/Nail Spitter Shot") as AudioClip;
 				newShot.name = "Shot" + Time.realtimeSinceStartup;
 				newShot.transform.position = gun.transform.position + new Vector3( 0, .8f , 0);
 				Shot shot = newShot.GetComponent<Shot>();
 				shot.target = tgt.gameObject;
 				shot.dps = structure.tower.damage;
 				structure.lastShot = structure.tower.attackSpeed;
+				AudioSource.PlayClipAtPoint(shotSound, gun.transform.position , 1);
 			}
 		}
 		else{
