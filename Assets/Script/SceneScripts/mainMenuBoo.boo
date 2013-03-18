@@ -1,4 +1,6 @@
 import UnityEngine
+import System.Collections
+import System.Collections.Generic
 
 class mainMenuBoo (MonoBehaviour):
 	public enum State:
@@ -8,13 +10,12 @@ class mainMenuBoo (MonoBehaviour):
 		Credits
 		Ready
 	
-	public background as Texture2D
-	public logo as Texture2D
-	public newGameSound as AudioClip
-	public optionSound as AudioClip
-	public creditSound as AudioClip
-	public exitSound as AudioClip
-	
+	public 	background as Texture2D
+	public 	logo as Texture2D
+	public 	newGameSound as AudioClip
+	public 	optionSound as AudioClip
+	public 	creditSound as AudioClip
+	public 	exitSound as AudioClip
 	private _state as State
 	private _ready as bool
 

@@ -35,7 +35,7 @@ public class IronBeetle : IBotStats {
 
 	public float speed {
 		get {
-			return 20f;
+			return 30f;
 		}
 	}
 	

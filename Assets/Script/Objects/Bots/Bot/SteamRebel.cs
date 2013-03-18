@@ -35,7 +35,7 @@ public class SteamRebel : IBotStats {
 
 	public float speed {
 		get {
-			return 25f;
+			return 40f;
 		}
 	}
 	

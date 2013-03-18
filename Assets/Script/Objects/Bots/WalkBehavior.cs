@@ -26,7 +26,7 @@ public class WalkBehavior : IMoveBehavior {
 				bot.StartCoroutine("Leave");
 			}
 		}
-		thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, Quaternion.LookRotation(waypoint - thisTransform.position),2 * Time.deltaTime);
+		thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, Quaternion.LookRotation(waypoint - thisTransform.position),3 * Time.deltaTime);
 		thisTransform.position+= thisTransform.forward * (bot.getAttributeValue(BotAttributeName.Speed)/50) * Time.deltaTime;
 		
 		return Vector3.Distance(initialPosition, thisTransform.position);

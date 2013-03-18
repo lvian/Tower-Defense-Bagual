@@ -19,13 +19,19 @@ public class OilSquallBehavior : IStructureBehavior {
 		
 		if(tgt)
 		{
+			thisTransform.Rotate(new Vector3(0, 1 * Time.timeScale , 0 ) );
+			//play oil animation
+			
+			/*
 			center = center + tgt.transform.position;
 			thisTransform.rotation =  Quaternion.Slerp(thisTransform.rotation , Quaternion.LookRotation(center  - thisTransform.position) , 1000f);
 			thisTransform.rotation = Quaternion.Euler(0f, thisTransform.rotation.eulerAngles.y, 0f);
 			thisTransform.Rotate(0f, 90f, 0f);
+			*/
 		}
 		else
 		{
+			//stop oil animation
 			returnCode = 1;	
 		}
 		

@@ -35,7 +35,7 @@ public class MetalWidow : IBotStats {
 
 	public float speed {
 		get {
-			return 30f;
+			return 45f;
 		}
 	}
 
