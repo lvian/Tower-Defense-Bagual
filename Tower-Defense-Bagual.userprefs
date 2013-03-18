@@ -1,6 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Objects\Bots\Spiderling\SpiderlingWalking.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\SceneScripts\MainMenu.cs">
     <Files>
       <File FileName="Assets\Script\Objects\Structures\StructureBuilder.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Tests\ScrollingUVs.cs" Line="1" Column="1" />
@@ -20,7 +20,7 @@
       <File FileName="Assets\Script\Objects\Bots\Spiderling\SpiderlingWalking.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Objects\Bots\MetalWidow\CrawlBehavior.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Objects\Structures\OilSquall\OilSquallBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\SceneScripts\mainMenuBoo.boo" Line="86" Column="5" />
+      <File FileName="Assets\Script\SceneScripts\MainMenu.cs" Line="28" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
