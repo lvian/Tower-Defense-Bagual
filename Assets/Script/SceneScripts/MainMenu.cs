@@ -61,35 +61,39 @@ public class MainMenu : MonoBehaviour {
 		if(logo)
 			GUI.DrawTexture(new Rect(Screen.width/2 -75, Screen.height * 0.01f, 150, 150), logo);
 		
-		GUI.BeginGroup(new Rect(Screen.width /2 -100, Screen.height/2 -67.5F , 200 , 135 ));
+		GUI.BeginGroup(new Rect(Screen.width /2 -100, Screen.height/2 -67.5f , 200 , 170 ));
 		
 		//Make a box at the center of t he screen
-		GUI.Box(new Rect(0,0,200,135), "Main Menu");
+		GUI.Box(new Rect(0,0,200,170), "Main Menu");
+		
+		// Play button
+		if(_ready){
+			if(GUI.Button(new Rect(10, 30, 180, 30), "Play")){
+				_state = State.Ready;
+			}
+		}
+		else{
+			GUI.Box(new Rect(10, 30, 180, 30), "Play");
+		}
 			
 		//Options button
-		if(GUI.Button(new Rect(10, 30, 180, 30), "Options")){
+		if(GUI.Button(new Rect(10, 65, 180, 30), "Options")){
 			//AudioSource.PlayClipAtPoint(optionSound, transform.position , 1)
 			_state = State.Options;
 		}
 			
 		//Credits button
-		if(GUI.Button(new Rect(10, 65, 180, 30), "Credits")){
+		if(GUI.Button(new Rect(10, 100, 180, 30), "Credits")){
 			//AudioSource.PlayClipAtPoint(creditSound, transform.position , 1)
 			_state = State.Credits;
 		}
 			
 		// Feedback button
-		if(GUI.Button(new Rect(10, 100, 180, 30), "Feedback")){
+		if(GUI.Button(new Rect(10, 135, 180, 30), "Feedback")){
 			Application.OpenURL("https://www.facebook.com/SturdyDef");
 		}
 			
 		GUI.EndGroup();
-		
-		if(_ready){
-			if(GUI.Button(new Rect(Screen.width /2 - 90, Screen.height - 50, 180 , 30), "Play")){
-				_state = State.Ready;
-			}
-		}
 	}
 	
 	void options(){
