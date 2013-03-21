@@ -14,7 +14,7 @@ public class OilSquallBehavior : IStructureBehavior {
 	{
 		Transform thisTransform = structure.transform;
 		int returnCode = 0;
-		Vector3 center = Vector3.zero;
+		//Vector3 center = Vector3.zero;
 		GameObject tgt = targets[0];
 		
 		if(tgt)

@@ -88,8 +88,6 @@
      <Compile Include="Assets\Script\AI\WaveUnit.cs" />
      <Compile Include="Assets\Script\AI\Waves.cs" />
      <Compile Include="Assets\Script\Camera\CameraMovement.cs" />
-     <Compile Include="Assets\Script\Camera\CameraMovement2.cs" />
-     <Compile Include="Assets\Script\Camera\CameraMovement3.cs" />
      <Compile Include="Assets\Script\Camera\CameraTools.cs" />
      <Compile Include="Assets\Script\Core\Callback.cs" />
      <Compile Include="Assets\Script\Core\EventManager.cs" />
@@ -98,6 +96,9 @@
      <Compile Include="Assets\Script\Core\Messenger.cs" />
      <Compile Include="Assets\Script\GUI\GUIManager.cs" />
      <Compile Include="Assets\Script\GUI\GUINotificator.cs" />
+     <Compile Include="Assets\Script\GUI\Notification.cs" />
+     <Compile Include="Assets\Script\GUI\NotificationWindow.cs" />
+     <Compile Include="Assets\Script\GUI\StoryTelling.cs" />
      <Compile Include="Assets\Script\Map\HighlightTile.cs" />
      <Compile Include="Assets\Script\Map\Level.cs" />
      <Compile Include="Assets\Script\Map\Map.cs" />
@@ -147,7 +148,6 @@
      <Compile Include="Assets\Script\Objects\Misc\InvadingUnit.cs" />
      <Compile Include="Assets\Script\Objects\Player\PlayerManager.cs" />
      <Compile Include="Assets\Script\Objects\Player\PlayerManagerModified.cs" />
-     <Compile Include="Assets\Script\Objects\Player\PlayerTutorial.cs" />
      <Compile Include="Assets\Script\Objects\Projectile\JumpShot.cs" />
      <Compile Include="Assets\Script\Objects\Projectile\Shot.cs" />
      <Compile Include="Assets\Script\Objects\Skills\Skill.cs" />
@@ -180,7 +180,10 @@
      <Compile Include="Assets\Script\Objects\Structures\StructureBuilder.cs" />
      <Compile Include="Assets\Script\Pathfinding\Lane.cs" />
      <Compile Include="Assets\Script\Pathfinding\WayPoint.cs" />
+     <Compile Include="Assets\Script\SceneScripts\FoodFactory.cs" />
+     <Compile Include="Assets\Script\SceneScripts\LevelScript.cs" />
      <Compile Include="Assets\Script\SceneScripts\MainMenu.cs" />
+     <Compile Include="Assets\Script\SceneScripts\SlautherHouseScript.cs" />
      <Compile Include="Assets\Script\Tests\FloatingText.cs" />
      <Compile Include="Assets\Script\Tests\Gain.cs" />
      <Compile Include="Assets\Script\Tests\Noise.cs" />

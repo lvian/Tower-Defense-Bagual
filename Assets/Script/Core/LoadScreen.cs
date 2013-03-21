@@ -57,7 +57,6 @@ public class LoadScreen : MonoBehaviour {
 		}
 		
 		if(_gateState == GateState.MainMenu){
-			Debug.Log("HEY YOU");
 			rectLeft.x -=  offset;	
 			rectRight.x += offset;
 			offset += .5f;
@@ -73,7 +72,7 @@ public class LoadScreen : MonoBehaviour {
 	void OnGUI(){
 		GUI.skin = null;
 		if(_gameInstance.GState == Game.GameState.Loading){
-			if(background && _gateState == GateState.Closed)
+			if(background && _gateState == GateState.Closed && Application.loadedLevel == 0)
 				GUI.DrawTexture(new Rect(0,0,Screen.width, Screen.height), background);
 			GUI.DrawTexture(rectLeft, gateLeft, ScaleMode.ScaleAndCrop);
 			GUI.DrawTexture(rectRight, gateRight, ScaleMode.ScaleAndCrop);

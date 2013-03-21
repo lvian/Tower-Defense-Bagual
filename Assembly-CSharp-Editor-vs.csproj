@@ -62,9 +62,6 @@
      <None Include="Assets\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapTransparent.shader" />
      <None Include="Assets\GameAnalytics\Plugins\WebPlayer\Readme_WebPlayer.txt" />
      <None Include="Assets\GameAnalytics\Plugins\WebPlayer\crossdomain.xml" />
- <Reference Include="Assembly-Boo">
- <HintPath>Library\ScriptAssemblies\Assembly-Boo.dll</HintPath>
- </Reference>
  <Reference Include="LitJson">
  <HintPath>Assets\GameAnalytics\Plugins\Framework\Using\LitJson.dll</HintPath>
  </Reference>

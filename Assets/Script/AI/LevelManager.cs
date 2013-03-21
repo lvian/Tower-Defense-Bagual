@@ -12,11 +12,6 @@ public class LevelManager : MonoBehaviour, IEventListener {
 		_gameInstance = Game.getInstance();
 		_gameInstance.GState = Game.GameState.Loading;
 		_playerManager = PlayerManager.instance;
-		
-		_playerManager.Gold = 50;
-		_playerManager.Lives = 20;
-		_playerManager.Score = 0;
-		_playerManager.UnlockedTowers = "NailSpitter OilSquall LightningTower";
 	}
 
 	void Start () {
@@ -26,24 +21,6 @@ public class LevelManager : MonoBehaviour, IEventListener {
 	}
 	
 	void Update () {
-		if(_scriptWaves){
-			if(Application.loadedLevel == 2){
-				if(_scriptWaves.CurrentWave >= 5)
-					_playerManager.UnlockedTowers = "NailSpitter OilSquall LightningTower";
-				else
-					_playerManager.UnlockedTowers = "NailSpitter OilSquall";	
-			}
-			if(Application.loadedLevel == 1){
-				if(_scriptWaves.CurrentWave >= 5)
-					_playerManager.UnlockedTowers = "NailSpitter OilSquall";
-				else
-					_playerManager.UnlockedTowers = "NailSpitter";
-			}
-		}
-		else{
-			_scriptWaves = GameObject.Find("Waves").GetComponent<Waves>();
-		}
-		
 		if(Input.GetKeyDown(KeyCode.V)){
 			IBotStats botStats = new SteamRebel();
 			GameObject  newBot = Object.Instantiate(Resources.Load(botStats.Prefab)) as GameObject;
@@ -55,7 +32,6 @@ public class LevelManager : MonoBehaviour, IEventListener {
 			botScript.moveBehavior = new WalkBehavior();
 			botScript.setPath(0);
 			botScript.init();
-			
 		}
 		
 		if(Input.GetKeyDown(KeyCode.I)){
@@ -69,8 +45,8 @@ public class LevelManager : MonoBehaviour, IEventListener {
 			botScript.moveBehavior = new WalkBehavior();
 			botScript.setPath(0);
 			botScript.init();
-			
 		}
+		
 		if(Input.GetKeyDown(KeyCode.B)){
 			IBotStats botStats = new SteamRebel();
 			GameObject  newBot = Object.Instantiate(Resources.Load(botStats.Prefab)) as GameObject;
@@ -83,6 +59,7 @@ public class LevelManager : MonoBehaviour, IEventListener {
 			botScript.setPath(1);
 			botScript.init();
 		}
+		
 		if(Input.GetKeyDown(KeyCode.M)){
 			IBotStats botStats = new MetalWidow();
 			GameObject  newBot = Object.Instantiate(Resources.Load(botStats.Prefab)) as GameObject;
@@ -95,6 +72,7 @@ public class LevelManager : MonoBehaviour, IEventListener {
 			botScript.setPath(1);
 			botScript.init();
 		}
+		
 		if(Input.GetKeyDown(KeyCode.N)){
 			Vector3 mouseOnCoord3 = _cameraTools.ScreenToWorld(Input.mousePosition);
 			Vector2 mouseOnCoord2 = Map.getInstance().coordinateToTile(mouseOnCoord3);
@@ -103,14 +81,11 @@ public class LevelManager : MonoBehaviour, IEventListener {
 				return;
 			}
 			_structureManager.spawnBuilder(tile.GetComponent<Tile>().transform.localPosition, new NailSpitterBehavior(), new NailSpitterFactory());
-		
 		}
 		
 		if(Input.GetKeyDown(KeyCode.P)){
 			_playerManager.Lives += 1;
 		}
-		
-		
 	}
 	
 	void loadPlayerPrefs(){
@@ -118,8 +93,7 @@ public class LevelManager : MonoBehaviour, IEventListener {
 	}
 
 	#region IEventListener implementation
-	public bool HandleEvent (IEvent evt)
-	{
+	public bool HandleEvent (IEvent evt){
 		return true;
 	}
 	#endregion

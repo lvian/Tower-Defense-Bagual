@@ -39,19 +39,6 @@ public class CameraMovement : MonoBehaviour {
 				x = -Input.GetAxis("Mouse X") * Time.deltaTime * speed;
 				z = -Input.GetAxis("Mouse Y") * Time.deltaTime * speed;
 			}
-			// [right]   [left]
-			//  [top]   [bottom]
-			Vector3[][] camSides = new Vector3[][]{
-				new Vector3[] {camera.ViewportToWorldPoint(new Vector3(.5f,0,camera.nearClipPlane)), camera.ViewportToWorldPoint(new Vector3(.5f,1,camera.nearClipPlane))},
-				new Vector3[] {camera.ViewportToWorldPoint(new Vector3(0,.5f,camera.nearClipPlane)), camera.ViewportToWorldPoint(new Vector3(1,.5f,camera.nearClipPlane))}
-			};
-			
-			/*Vector3[][] camSides = new Vector3[][]{
-			    new Vector3[] {camera.ViewportToWorldPoint(new Vector3(.5f,0,camera.farClipPlane)), camera.ViewportToWorldPoint(new Vector3(.5f,1,camera.farClipPlane))},
-			    new Vector3[] {camera.ViewportToWorldPoint(new Vector3(0,.5f,camera.farClipPlane)), camera.ViewportToWorldPoint(new Vector3(1,.5f,camera.farClipPlane))}
-			   };*/
-			
-			
 			// going right
 			if(x <= 0){
 				Vector3 right = transform.position;

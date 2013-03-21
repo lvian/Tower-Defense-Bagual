@@ -30,6 +30,8 @@ public class GUIManager : MonoBehaviour {
 	static private List<Rect> _GUICollider;
 	private List<Rect> GUICollider;
 	public bool showColliders;
+	private Queue<Notification> notifications;
+	private Notification currentNotification;
 	
 	public Texture2D		nailSpitterIcon;
 	public Texture2D		archTowerIcon;
@@ -113,11 +115,15 @@ public class GUIManager : MonoBehaviour {
 		_ls = GameObject.Find("LoadingScreen").GetComponent<LoadScreen>();
 		_victoryControl = false;
 		
+		notifications = new Queue<Notification>();
+		
 		_GUICollider = new List<Rect>();
 		GUICollider  = new List<Rect>();
 		initComponents();
 		
 		Messenger<bool>.AddListener("PlayerVictory",defVictoryDefeat);
+		Messenger<Notification>.AddListener("SendNotification", collectNotification);
+		Messenger<Notification>.AddListener("RemoveNotification", discardNotification);
 	}
 	
 	void initComponents(){
@@ -243,6 +249,12 @@ public class GUIManager : MonoBehaviour {
 			break;
 		default:
 			break;
+		}
+		
+		if(currentNotification == null && notifications.Count > 0)
+			currentNotification = notifications.Dequeue();
+		else{
+				showNotification(currentNotification);
 		}
 		
 		#region Tooltip
@@ -589,6 +601,7 @@ public class GUIManager : MonoBehaviour {
 		#endregion
 	}
 	
+	#region TileMenu
 	void DrawTileMenu(){
 		DrawDummyGUI();
 		GUI.skin = sknTileMenu;
@@ -631,10 +644,11 @@ public class GUIManager : MonoBehaviour {
 			if(buttonPos3.Contains(Event.current.mousePosition)){
 				drawTowerInfo(buttonPos3, "LightningTower");
 			}
-		}
-		
+		}	
 	}
+	#endregion
 	
+	#region TowerMenu
 	void DrawTowerMenu(){
 		DrawDummyGUI();
 		GUI.skin = sknTileMenu;
@@ -662,24 +676,54 @@ public class GUIManager : MonoBehaviour {
 			_selectedTower = null;
 			_towerReachObject.renderer.enabled = false;
 		}
-		
-		
-		/*Structure tw = _selectedTower.GetComponent<Structure>()  as Structure;
-		tw.getAttributeValue(StructureAttributeNames.Dps);
-		GUI.BeginGroup(new Rect(0 , _camera.GetScreenHeight() / 2 - 70, 70 , 135));
-		GUI.Box(new Rect(0,0,70,135), towerStatsTexture);
-		//damage stat
-		GUI.Label(new Rect( 10 , 20 , 25 ,25), damageIcon ); 
-		GUI.Label(new Rect( 45 , 20 , 55 ,25), ""+tw.tower.damage); 
-		//range stat
-		GUI.Label(new Rect( 10 , 55 , 25 ,25), rangeIcon );
-		GUI.Label(new Rect( 45 , 55 , 55 ,25), ""+tw.tower.reach );
-		//attack speed stat
-		GUI.Label(new Rect( 10 , 90 , 25 ,25), attackSpeedIcon );
-		GUI.Label(new Rect( 45 , 90 , 55 ,25), ""+tw.tower.attackSpeed );
-		GUI.EndGroup();*/
 	}
 	
+	void drawTowerInfo (Rect buttonPos, string unit)
+	{
+		if(_selectedTile)
+		{
+			AttackingUnit attackingUnit = getUnit(unit);
+			TowerFactory towerFactory = attackingUnit.TowerFactory;
+			Tower tower = towerFactory.GetTower();
+			_towerReachObject.renderer.enabled = true;
+			
+			_towerReachObject.transform.position = _selectedTile.transform.localPosition;
+			_towerReachObject.transform.localScale = new Vector3(tower.reach * 2 , 0 , tower.reach * 2);
+			
+			GUI.skin = sknTileMenu;
+			GUI.BeginGroup(new Rect(0f , _camera.GetScreenHeight() / 2 - 72.5f, 250f , 135f));
+			GUI.Box(new Rect(0,0,250,135), "");
+			GUI.skin = sknBoldText;
+			GUI.Label(new Rect(10, 20, 200, 25), tower.Name);
+			GUI.skin = sknItalicText;
+			GUI.Label(new Rect(10, 33, 200, 55), tower.Description);
+			GUI.skin = null;
+			GUI.Label(new Rect(10, 70, 200, 25), "Damage");
+			GUI.skin = sknBoldText;
+			GUI.Label(new Rect(100, 70, 200, 25), "" + tower.damage);
+			
+			GUI.skin = null;
+			GUI.Label(new Rect(10, 85, 200, 25), "Reach");
+			GUI.skin = sknBoldText;
+			GUI.Label(new Rect(100, 85, 200, 25), "" + tower.reach);	
+			
+			GUI.skin = null;
+			GUI.Label(new Rect(10, 100, 200, 25), "Attack Speed");
+			GUI.skin = sknBoldText;
+			GUI.Label(new Rect(100, 100, 200, 25), "" + tower.attackSpeed);
+			
+			GUI.skin = null;
+			GUI.Label(new Rect(10, 115, 200, 25), "Price");
+			GUI.skin = sknBoldText;
+			GUI.Label(new Rect(100, 115, 200, 25), "" + tower.price);
+
+			GUI.EndGroup();
+		}
+		
+	}
+	#endregion
+	
+	#region VictoryDefeat
 	void defVictoryDefeat(bool victory){
 		if(!_victoryControl)
 		{
@@ -758,7 +802,9 @@ public class GUIManager : MonoBehaviour {
 		
 		GUI.EndGroup();
 	}
+	#endregion
 	
+	#region Unit Spawn
 	void spawnUnit(string unit, GameObject tile){
 		AttackingUnit attackingUnit = getUnit(unit);
 		TowerFactory towerFactory = attackingUnit.TowerFactory;
@@ -780,6 +826,21 @@ public class GUIManager : MonoBehaviour {
 		_towerReachObject.renderer.enabled = false;
 	}
 	
+	AttackingUnit getUnit(string unit){
+		switch(unit){
+		case "NailSpitter":
+			return new AttackingUnit(new NailSpitterBehavior(), new NailSpitterFactory());
+		case "LightningTower":
+			return new AttackingUnit(new LightningTowerBehavior(), new LightningTowerFactory());
+		case "OilSquall":
+			return new AttackingUnit(new OilSquallBehavior(), new OilSquallFactory());
+		default:
+			return null;
+		}
+	}
+	#endregion
+	
+	#region Speed Control
 	void controlGameSpeed(int n)
 	{
 		_gameSpeed += n;
@@ -820,19 +881,7 @@ public class GUIManager : MonoBehaviour {
 			_gameSpeed--;	
 		}
 	}
-
-	AttackingUnit getUnit(string unit){
-		switch(unit){
-		case "NailSpitter":
-			return new AttackingUnit(new NailSpitterBehavior(), new NailSpitterFactory());
-		case "LightningTower":
-			return new AttackingUnit(new LightningTowerBehavior(), new LightningTowerFactory());
-		case "OilSquall":
-			return new AttackingUnit(new OilSquallBehavior(), new OilSquallFactory());
-		default:
-			return null;
-		}
-	}
+	#endregion
 	
 	public static bool isHitingInterface(){
 		bool hit = false;
@@ -843,50 +892,24 @@ public class GUIManager : MonoBehaviour {
 		}
 		return hit;
 	}
-
-	void drawTowerInfo (Rect buttonPos, string unit)
-	{
-		if(_selectedTile)
-		{
-			AttackingUnit attackingUnit = getUnit(unit);
-			TowerFactory towerFactory = attackingUnit.TowerFactory;
-			Tower tower = towerFactory.GetTower();
-			_towerReachObject.renderer.enabled = true;
-			
-			_towerReachObject.transform.position = _selectedTile.transform.localPosition;
-			_towerReachObject.transform.localScale = new Vector3(tower.reach * 2 , 0 , tower.reach * 2);
-			
-			GUI.skin = sknTileMenu;
-			GUI.BeginGroup(new Rect(0f , _camera.GetScreenHeight() / 2 - 72.5f, 250f , 135f));
-			GUI.Box(new Rect(0,0,250,135), "");
-			GUI.skin = sknBoldText;
-			GUI.Label(new Rect(10, 20, 200, 25), tower.Name);
-			GUI.skin = sknItalicText;
-			GUI.Label(new Rect(10, 33, 200, 55), tower.Description);
-			GUI.skin = null;
-			GUI.Label(new Rect(10, 70, 200, 25), "Damage");
-			GUI.skin = sknBoldText;
-			GUI.Label(new Rect(100, 70, 200, 25), "" + tower.damage);
-			
-			GUI.skin = null;
-			GUI.Label(new Rect(10, 85, 200, 25), "Reach");
-			GUI.skin = sknBoldText;
-			GUI.Label(new Rect(100, 85, 200, 25), "" + tower.reach);	
-			
-			GUI.skin = null;
-			GUI.Label(new Rect(10, 100, 200, 25), "Attack Speed");
-			GUI.skin = sknBoldText;
-			GUI.Label(new Rect(100, 100, 200, 25), "" + tower.attackSpeed);
-			
-			GUI.skin = null;
-			GUI.Label(new Rect(10, 115, 200, 25), "Price");
-			GUI.skin = sknBoldText;
-			GUI.Label(new Rect(100, 115, 200, 25), "" + tower.price);
-
-			GUI.EndGroup();
+	
+	#region Notifications
+	void collectNotification(Notification n){
+		notifications.Enqueue(n);
+		while(n.nextNotification != null){
+			n = n.nextNotification;
+			notifications.Enqueue(n);
 		}
-		
 	}
+	
+	void discardNotification(Notification n){
+		currentNotification = null;
+	}
+	
+	void showNotification(Notification n){
+		if(n != null) GUICollider.Add(n.draw());
+	}
+	#endregion
 }
 
 public enum InterfaceState{
