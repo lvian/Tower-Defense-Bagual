@@ -30,6 +30,8 @@ public class GUIManager : MonoBehaviour {
 	static private List<Rect> _GUICollider;
 	private List<Rect> GUICollider;
 	public bool showColliders;
+	
+	//notifications
 	private Queue<Notification> notifications;
 	private Notification currentNotification;
 	
@@ -124,6 +126,7 @@ public class GUIManager : MonoBehaviour {
 		Messenger<bool>.AddListener("PlayerVictory",defVictoryDefeat);
 		Messenger<Notification>.AddListener("SendNotification", collectNotification);
 		Messenger<Notification>.AddListener("RemoveNotification", discardNotification);
+		Messenger<Notification>.AddListener("SkipNotification", skipNotifications);
 	}
 	
 	void initComponents(){
@@ -906,8 +909,15 @@ public class GUIManager : MonoBehaviour {
 		currentNotification = null;
 	}
 	
+	void skipNotifications(Notification n){
+		while(n.nextNotification != null){
+			n = notifications.Dequeue();
+		}
+		discardNotification(n);
+	}
+	
 	void showNotification(Notification n){
-		if(n != null) GUICollider.Add(n.draw());
+		if(_game.GState != Game.GameState.Loading) if(n != null) GUICollider.Add(n.draw());
 	}
 	#endregion
 }

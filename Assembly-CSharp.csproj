@@ -98,7 +98,6 @@
      <Compile Include="Assets\Script\GUI\GUINotificator.cs" />
      <Compile Include="Assets\Script\GUI\Notification.cs" />
      <Compile Include="Assets\Script\GUI\NotificationWindow.cs" />
-     <Compile Include="Assets\Script\GUI\StoryTelling.cs" />
      <Compile Include="Assets\Script\Map\HighlightTile.cs" />
      <Compile Include="Assets\Script\Map\Level.cs" />
      <Compile Include="Assets\Script\Map\Map.cs" />
