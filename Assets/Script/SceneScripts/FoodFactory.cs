@@ -6,6 +6,7 @@ public class FoodFactory : LevelScript {
 	private bool oilNotificationShowed = false;
 	private bool steamNotificationShowed = false;
 	private bool widowNotificationShowed = false;
+	private bool storyNotificationShowed = false;
 	
 	public override void Awake ()
 	{
@@ -44,6 +45,13 @@ public class FoodFactory : LevelScript {
 				Messenger<Notification>.Broadcast("SendNotification", n);
 				steamNotificationShowed = true;
 			}
+		}
+		if(Time.realtimeSinceStartup > 0 && !storyNotificationShowed){
+			Notification n1 = new StoryWindow(
+				new Rect(0f, 0f, 300f, 200f),
+				Resources.Load("Story/level1-story1") as Texture2D);
+			Messenger<Notification>.Broadcast("SendNotification", n1);
+			storyNotificationShowed = true;
 		}
 		if(_scriptWaves){
 			if(Application.loadedLevel == 1){
