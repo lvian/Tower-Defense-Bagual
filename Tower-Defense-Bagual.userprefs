@@ -1,14 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\GUI\NotificationWindow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\SceneScripts\SlautherHouseScript.cs">
     <Files>
       <File FileName="Assets\Script\SceneScripts\FoodFactory.cs" Line="49" Column="65" />
       <File FileName="Assets\Script\GUI\Notification.cs" Line="4" Column="23" />
       <File FileName="Assets\Script\AI\Waves.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\GUI\GUINotificator.cs" Line="20" Column="31" />
+      <File FileName="Assets\Script\GUI\GUINotificator.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\GUI\NotificationWindow.cs" Line="28" Column="14" />
-      <File FileName="Assets\Script\GUI\StoryWindow.cs" Line="43" Column="42" />
-      <File FileName="Assets\Script\Core\LoadScreen.cs" Line="77" Column="28" />
+      <File FileName="Assets\Script\GUI\StoryWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Core\LoadScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Objects\Structures\NailSpitter\NailSpitterBehavior.cs" Line="30" Column="72" />
+      <File FileName="Assets\Script\Objects\Structures\OilSquall\OilSquallBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Objects\Structures\LightningTower\LightningTowerBehavior.cs" Line="36" Column="72" />
+      <File FileName="Assets\Script\AI\LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\SceneScripts\SlautherHouseScript.cs" Line="17" Column="37" />
+      <File FileName="Assets\Script\Objects\Projectile\JumpShot.cs" Line="42" Column="26" />
+      <File FileName="Assets\Script\Objects\Bots\Bot.cs" Line="90" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

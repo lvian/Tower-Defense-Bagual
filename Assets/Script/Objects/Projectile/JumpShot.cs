@@ -39,6 +39,8 @@ public class JumpShot : MonoBehaviour {
 							{
 								Bot tmpBot = tgt.GetComponent("Bot") as Bot;
 								float tempdist = (transform.position - tgt.transform.position).magnitude;
+								Debug.Log("dist"+tempdist);
+								Debug.Log("jump range "+dist);
 								if( tempdist < dist && !targetsHit.Contains(tgt.name) && tmpBot.isAlive()  )
 								{
 									dist = tempdist;

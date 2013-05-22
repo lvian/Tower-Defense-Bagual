@@ -23,6 +23,7 @@ public class LightningTowerBehavior : IStructureBehavior {
 				//waitting for a lighting particle effect
 				//gun.transform.particleSystem.Play();
 				GameObject newShot = Object.Instantiate(Resources.Load("Prefabs/ArchedShot")) as GameObject;
+				AudioClip shotSound = Resources.Load("FX/Attack 3") as AudioClip;
 				newShot.name = "Shot" + Time.realtimeSinceStartup;
 				//temp fix for shot height
 				newShot.transform.position = new Vector3(gun.transform.position.x, gun.transform.position.y + 1 ,gun.transform.position.z);
@@ -30,8 +31,9 @@ public class LightningTowerBehavior : IStructureBehavior {
 				shot.target = tgt.gameObject;
 				shot.dps = structure.tower.damage;
 				shot.jumps = structure.tower.jumps;
-				shot.jumpRange = structure.tower.reach / 2;
+				shot.jumpRange = structure.tower.reach ;
 				structure.lastShot = structure.tower.attackSpeed;
+				AudioSource.PlayClipAtPoint(shotSound, gun.transform.position , 1);
 			}
 		}
 		else{

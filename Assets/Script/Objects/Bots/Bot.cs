@@ -87,9 +87,11 @@ public class Bot : InvadingEntity {
 	
 	public IEnumerator Die(){
 		if(!deathInformed){
+			AudioClip shotSound = Resources.Load("FX/Death 1") as AudioClip;
 			Instantiate(Resources.Load("Prefabs/SteamRebelExplosions"), thisTransform.localPosition, Quaternion.identity);
 			Messenger<GameObject>.Broadcast("BotDied", this.gameObject);
 			deathInformed = true;
+			AudioSource.PlayClipAtPoint(shotSound, gameObject.transform.position , 1);
 		}
 		yield return new WaitForSeconds(3f);
 		
