@@ -15,7 +15,7 @@ public class FoodFactory : LevelScript {
 
 	public override void Start ()
 	{
-		_playerManager.UnlockedTowers = "NailSpitter";
+		_playerManager.UnlockedTowers = "NailSpitter FlameTower";
 		base.Start();
 	}
 

@@ -167,6 +167,10 @@
      <Compile Include="Assets\Script\Objects\Structures\Bunker\BunkerBehavior.cs" />
      <Compile Include="Assets\Script\Objects\Structures\Bunker\BunkerLevel1.cs" />
      <Compile Include="Assets\Script\Objects\Structures\Bunker\BunkerLevel2.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\FlameTower\FlameTower.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\FlameTower\FlameTowerBase.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\FlameTower\FlameTowerBehavior.cs" />
+     <Compile Include="Assets\Script\Objects\Structures\FlameTower\FlameTowerFactory.cs" />
      <Compile Include="Assets\Script\Objects\Structures\LightningTower\LightningTower.cs" />
      <Compile Include="Assets\Script\Objects\Structures\LightningTower\LightningTowerAnimation.cs" />
      <Compile Include="Assets\Script\Objects\Structures\LightningTower\LightningTowerBase.cs" />

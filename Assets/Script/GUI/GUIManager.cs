@@ -38,6 +38,7 @@ public class GUIManager : MonoBehaviour {
 	public Texture2D		nailSpitterIcon;
 	public Texture2D		archTowerIcon;
 	public Texture2D		oilSquallIcon;
+	public Texture2D		flameTowerIcon;
 	
 	
 	public Material		towerReach;
@@ -617,7 +618,8 @@ public class GUIManager : MonoBehaviour {
 		Rect buttonPos1 = new Rect((pos.x * _camera.GetScreenWidth()) -25, (_camera.GetScreenHeight() - (pos.y * _camera.GetScreenHeight()) -25), 50, 50);
 		Rect buttonPos2 = new Rect((pos.x * _camera.GetScreenWidth()) +25, (_camera.GetScreenHeight() - (pos.y * _camera.GetScreenHeight()) -25), 50, 50);
 		Rect buttonPos3 = new Rect((pos.x * _camera.GetScreenWidth()) +75, (_camera.GetScreenHeight() - (pos.y * _camera.GetScreenHeight()) -25), 50, 50);
-		GUICollider.Add(new Rect(buttonPos1.x, buttonPos1.y, buttonPos3.xMax - buttonPos1.xMin, 50f));
+		Rect buttonPos4 = new Rect((pos.x * _camera.GetScreenWidth()) +125, (_camera.GetScreenHeight() - (pos.y * _camera.GetScreenHeight()) -25), 50, 50);
+		GUICollider.Add(new Rect(buttonPos1.x, buttonPos1.y, buttonPos4.xMax - buttonPos1.xMin, 50f));
 		
 		GUI.skin = sknTileMenu;
 		if(_player.UnlockedTowers.Contains("NailSpitter")){
@@ -646,6 +648,17 @@ public class GUIManager : MonoBehaviour {
 			}
 			if(buttonPos3.Contains(Event.current.mousePosition)){
 				drawTowerInfo(buttonPos3, "LightningTower");
+			}
+		}	
+		
+		GUI.skin = sknTileMenu;
+		if(_player.UnlockedTowers.Contains("FlameTower")){
+			if(GUI.Button(buttonPos4, flameTowerIcon)){
+				Debug.Log("FlameTower");
+				spawnUnit("FlameTower", _selectedTile);
+			}
+			if(buttonPos4.Contains(Event.current.mousePosition)){
+				drawTowerInfo(buttonPos4, "FlameTower");
 			}
 		}	
 	}
@@ -837,6 +850,8 @@ public class GUIManager : MonoBehaviour {
 			return new AttackingUnit(new LightningTowerBehavior(), new LightningTowerFactory());
 		case "OilSquall":
 			return new AttackingUnit(new OilSquallBehavior(), new OilSquallFactory());
+		case "FlameTower":
+			return new AttackingUnit(new FlameTowerBehavior(), new FlameTowerFactory());
 		default:
 			return null;
 		}
