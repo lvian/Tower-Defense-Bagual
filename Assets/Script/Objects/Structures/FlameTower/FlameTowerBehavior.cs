@@ -8,14 +8,17 @@ public class FlameTowerBehavior: IStructureBehavior {
 	#region IStructureBehavior implementation
 	public int attack (AttackingEntity structure, GameObject[] targets)
 	{
+		GameObject gun = structure.transform.GetChild(1).gameObject;
+		GameObject flame  = gun.transform.GetChild(0).gameObject;
+		flame.particleSystem.loop = false;
 		int returnCode = 0;
 		GameObject tgt = targets[0];
 		if(tgt){
-			GameObject center = structure.transform.GetChild(1).gameObject;
-			GameObject gun	  = center;
-			Quaternion rot =  Quaternion.Slerp(center.transform.rotation , 
-							             Quaternion.LookRotation(tgt.transform.position  - center.transform.position) , 100f);
-			center.transform.rotation = Quaternion.Euler(-90, rot.eulerAngles.y, 90);
+			Debug.Log("liga");
+			flame.particleSystem.Play();
+			Quaternion rot =  Quaternion.Slerp(gun.transform.rotation , 
+							             Quaternion.LookRotation(tgt.transform.position  - gun.transform.position) , 100f);
+			gun.transform.rotation = Quaternion.Euler(-90, rot.eulerAngles.y, -90);
 			//center.transform.Rotate(Vector3.up, 0f);
 			if(structure.lastShot <= 0){
 				//gun.particleSystem.Play();
@@ -31,8 +34,11 @@ public class FlameTowerBehavior: IStructureBehavior {
 			}
 		}
 		else{
+			Debug.Log("desliga");
+			flame.particleSystem.Stop();
 			returnCode = 1;	
 		}
+		
 		return returnCode;
 	}
 

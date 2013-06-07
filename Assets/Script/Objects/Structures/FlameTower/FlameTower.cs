@@ -6,7 +6,7 @@ public class FlameTower : Tower {
 	float	_reach	= 2f;
 	int		_price	= 20;
 	int		_jumps	= 0;
-	float	_attackSpeed	= 0.5f;
+	float	_attackSpeed	= 0.25f;
 	
 	#region implemented abstract members of Tower
 	public override string Name {
