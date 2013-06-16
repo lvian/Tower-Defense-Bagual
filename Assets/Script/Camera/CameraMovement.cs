@@ -88,8 +88,6 @@ public class CameraMovement : MonoBehaviour {
 			else{
 				//recalculate x position so it gets back inside the collider
 				Vector3 closestpoint = _boxCollider.ClosestPointOnBounds(transform.position);
-				Debug.Log("closest  "+closestpoint);
-				Debug.Log("transform  "+transform.position);
 				transform.position = closestpoint;
 			}
 		}

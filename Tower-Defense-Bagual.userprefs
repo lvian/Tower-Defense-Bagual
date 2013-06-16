@@ -1,16 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Objects\Structures\FlameTower\FlameTowerBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Camera\CameraMovement.cs">
     <Files>
-      <File FileName="Assets\Script\Objects\Structures\FlameTower\FlameTowerBehavior.cs" Line="13" Column="37" />
-      <File FileName="Assets\Script\Objects\Structures\NailSpitter\NailSpitterBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Objects\Structures\FlameTower\FlameTowerBehavior.cs" Line="49" Column="14" />
+      <File FileName="Assets\Script\Objects\Structures\NailSpitter\NailSpitterBehavior.cs" Line="30" Column="72" />
       <File FileName="Assets\Script\Objects\Structures\NailSpitter\NailSpitterBase.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Objects\Structures\NailSpitter\NailSpitterFactory.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Objects\Structures\NailSpitter\NailSpitterTower.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Objects\Structures\FlameTower\FlameTowerBase.cs" Line="34" Column="2" />
-      <File FileName="Assets\Script\Objects\Structures\FlameTower\FlameTower.cs" Line="9" Column="26" />
+      <File FileName="Assets\Script\Objects\Structures\FlameTower\FlameTower.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\SceneScripts\FoodFactory.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\GUI\GUIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Objects\Projectile\Shot.cs" Line="23" Column="40" />
+      <File FileName="Assets\Script\Camera\CameraMovement.cs" Line="91" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
